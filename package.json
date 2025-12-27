@@ -1,0 +1,38 @@
+{
+  "name": "microservices-bigdreamsystem",
+  "version": "1.0.0",
+  "description": "Microservices architecture for BigDreamSystem with Moleculer",
+  "main": "broker.js",
+  "scripts": {
+    "dev": "node broker.js",
+    "start": "node broker.js",
+    "whatsapp": "moleculer connect services/whatsapp.service.js",
+    "ai": "moleculer connect services/ai.service.js",
+    "api": "moleculer connect services/api.service.js"
+  },
+  "keywords": [
+    "moleculer",
+    "microservices",
+    "whatsapp",
+    "ai"
+  ],
+  "author": "BigDreamSystem",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.13.2",
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "moleculer": "^0.14.35",
+    "openai": "^6.15.0",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.2",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "moleculer-repl": "^0.7.4"
+  }
+}
