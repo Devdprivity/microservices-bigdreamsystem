@@ -17,7 +17,11 @@ broker.loadServices(path.join(__dirname, 'services'), '**/*.service.js');
 // Start broker
 broker.start()
     .then(() => {
-        broker.repl(); // Start REPL for debugging
+        console.log('✅ All services started successfully');
+        // Only start REPL in development (not in production/containers)
+        if (process.env.NODE_ENV !== 'production' && !process.env.RAILWAY_ENVIRONMENT) {
+            broker.repl(); // Start REPL for debugging
+        }
     })
     .catch(err => {
         console.error('Error starting broker', err);

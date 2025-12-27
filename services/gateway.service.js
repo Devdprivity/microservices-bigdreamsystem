@@ -15,7 +15,8 @@ module.exports = {
      * Settings
      */
     settings: {
-        port: process.env.GATEWAY_PORT || 3000,
+        // Railway provides PORT env var, fallback to GATEWAY_PORT or 3000
+        port: process.env.PORT || process.env.GATEWAY_PORT || 3000,
         cors: {
             origin: '*',
             credentials: true
